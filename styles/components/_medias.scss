@@ -1,0 +1,82 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+
+@media screen and (max-width: 800px) {
+
+ header {
+    nav {
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+       width: 200px;
+      }
+
+      .linha {
+       display: none;
+      }
+
+      ul {
+       flex-direction: column;
+      }
+    }
+
+    #home {
+      margin: 4rem auto 1.8rem auto;
+      text-align: center;
+
+      .img-home {
+       display: none;
+      }
+    }
+ }
+
+ #nosso-espaco {
+    width: auto;
+
+    .detalhes {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        
+        .img-espaco {
+         width: 80%;
+        }
+
+        .imgs-espaco-mobile {
+         display: none;
+        }
+    }
+ }
+
+ #servico {
+   .cards {
+    flex-direction: column;
+   }
+ }
+
+ #desconto {
+   img {
+    display: none;
+   }
+
+   .desconto-form {
+    max-width: 100%;
+
+    .input-btn {
+     max-width: 400px;
+    }
+   }
+ }
+
+ #contatos {
+   .contatos-imgs {
+    display: none;
+   }
+
+   .contatos-form {
+    max-width: 100%;
+   }
+ }
+}

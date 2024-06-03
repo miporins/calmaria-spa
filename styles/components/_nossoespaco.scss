@@ -1,0 +1,42 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#nosso-espaco {
+ @include mixins.margem-central(100%);
+ background: linear-gradient(180deg, #fff 0%, variaveis.$cor-branca 100%, #ffffff);
+
+ .detalhes {
+   width: 100%;
+   display: inline-flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 2rem;
+   padding: 2rem 0;
+  
+
+  .imgs-espaco {
+      max-width: 500px;
+  }
+
+  .espaco-textos {
+      @extend .imgs-espaco;
+   
+      .titulo {
+         @include mixins.ff-fs-color(variaveis.$font-titulo, 1.1rem, #36754e);
+         font-weight: 500;
+      }
+   
+      .infos {
+         @include mixins.ff-fs-color(variaveis.$font-textos, .9rem, variaveis.$cor-quartenaria);
+      }
+   
+      .separador {
+         width: 100%;
+      }
+  }
+
+  &:nth-child(2) {
+     flex-direction: row-reverse;
+  }
+ } 
+}
